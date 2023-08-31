@@ -535,6 +535,7 @@ video {
         height:8vw;
         border-radius: 2.5vw;
         font-size: 3.5vw;
+       
     }
     .signupbox
 {
@@ -550,6 +551,7 @@ video {
     font-weight: 500;
     font-size: 4vw;
     margin-top: 5%;
+    margin-bottom: 20%;
     border: none;
     color:#131422;
     justify-content: center;

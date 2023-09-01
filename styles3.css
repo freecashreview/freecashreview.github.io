@@ -85,6 +85,7 @@ video {
     border-radius: 2.5vw;
     z-index:1;
     overflow: hidden !important;
+    -webkit-tap-highlight-color: transparent;
 }
 .video-thumbnail:hover
 {

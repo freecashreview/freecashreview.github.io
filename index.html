@@ -21,7 +21,7 @@
 <meta property="twitter:image" content="https://i.imgur.com/Iz8D2TL.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="styles3.css">
+		<link rel="stylesheet" type="text/css" href="styles4.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
@@ -34,10 +34,7 @@
          </div>
          <div class="videobox">
             <video id="video" class="video" src="https://files.catbox.moe/ir9jfe.mp4" controls></video>
-            <div class="video-thumbnail"></div>
-            <div class="play-button">
-                <i class="fas fa-play"></i>
-              </div>
+            <div class="video-thumbnail" onclick="playVideo()"></div>
          </div>
          <div class="menubox">
             <div class="textbox">
@@ -77,65 +74,17 @@
         </div>
 
         <script>
-            const playButton = document.querySelector('.play-button');
-            const videoThumbnail = document.querySelector('.video-thumbnail');
-            const videoPath = 'https://files.catbox.moe/ir9jfe.mp4';
-            let video = null;
-            let isPlaying = false;
-        
-            playButton.addEventListener('click', () => {
-              if (!isPlaying) {
-                videoThumbnail.style.backgroundImage = 'none';
-                playButton.innerHTML = '<i class="fas fa-pause"></i>';
-                if (!video) {
-                  playVideo();
-                } else {
-                  resumeVideo();
-                }
-              } else {
-                playButton.innerHTML = '<i class="fas fa-play"></i>';
-                pauseVideo();
-              }
-            });
-        
-            function playVideo() {
-              isPlaying = true;
-              video = document.createElement('video');
-              video.src = videoPath;
-              video.controls = true;
-              video.autoplay = true;
-              video.style.width = '100%';
-              video.style.height = '100%';
-              video.style.objectFit = 'cover';
-              video.addEventListener('ended', () => {
-                pauseVideo();
-              });
-              video.addEventListener('play', () => {
-                setTimeout(() => {
-                  playButton.querySelector('i').style.display = 'none';
-                }, 1000);
-              });
-              video.addEventListener('pause', () => {
-                setTimeout(() => {
-                  playButton.innerHTML = '<i class="fas fa-play"></i>';
-                }, 1000);
-              });
-              videoThumbnail.appendChild(video);
-            }
-        
-            function pauseVideo() {
-              if (video) {
-                isPlaying = false;
-                video.pause();
-              }
-            }
-        
-            function resumeVideo() {
-              if (video) {
-                isPlaying = true;
-                video.play();
-              }
-            }
+             function playVideo() {
+            var video = document.getElementById('video');
+            var thumbnailContainer = document.querySelector('.video-thumbnail');
+
+            // Show the video and play it
+            video.style.display = 'block';
+            video.play();
+
+            // Hide the thumbnail container
+            thumbnailContainer.style.display = 'none';
+        }
           </script>
     <script>
         const thumbsup = document.querySelector('.fa-thumbs-up');

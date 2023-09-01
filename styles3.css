@@ -80,31 +80,16 @@ video {
     transform:translate(0%,0%);
     width: 100%;
     height: 100%;
-    background-image: url('wallpaper.png');
+    background-image: url('wallpaper2.png');
     background-size: cover;
     border-radius: 2.5vw;
     z-index:1;
     overflow: hidden !important;
 }
-.play-button
+.video-thumbnail:hover
 {
-    top: 50%;
-    left: 50%;
-    position: relative;
-    transform:translate(-5%,-50%);
-   font-size: 5vw;
-    color:rgb(0,230,112);
-    z-index: 2;
-    overflow: hidden !important;
+    cursor:pointer;
 }
-.play-button.visible {
-    display: block; /* Show when needed */
-    overflow: hidden !important;
-  }
-
-  .play-button i {
-    cursor: pointer; /* Change cursor to pointer */
-  }
 .menubox
 {
     width:50vw;
@@ -489,17 +474,6 @@ video {
     margin-left: 1vw;
     text-align: center;
 }
-   
-.play-button
-{
-    top: 50%;
-    left: 50%;
-    position: relative;
-    transform:translate(-5%,120%);
-   font-size: 15vw;
-    color:rgb(0,230,112);
-    z-index: 2;
-}
 .reviewbox
 {
     width:85vw;
@@ -535,12 +509,12 @@ video {
         height:8vw;
         border-radius: 2.5vw;
         font-size: 3.5vw;
-       
+        margin-top: -10%;
     }
     .signupbox
 {
     width:60vw;
-    height:12vw;
+    height:13vw;
     display: inline-block;
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -550,8 +524,7 @@ video {
     flex-direction: row;
     font-weight: 500;
     font-size: 4vw;
-    margin-top: 5%;
-    margin-bottom: 20%;
+    margin-bottom: 30%;
     border: none;
     color:#131422;
     justify-content: center;
